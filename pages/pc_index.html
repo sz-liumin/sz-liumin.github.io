@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天·鸣</title>
+    <script src="../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', 'https://v1.jinrishici.com/all.json');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    var data = JSON.parse(xhr.responseText);
+
+                    //var gushici = document.getElementById('gushici');
+                    //gushici.innerText = data.content + "\n" + data.origin+ "\n" + data.author;
+
+                    $('#origin').text(data.origin)
+                    $('#author').text(data.author)
+                    $('#content').text(data.content)
+
+                }
+            };
+            xhr.send();
+        });
+    </script>
 </head>
 
 <style>
@@ -145,6 +166,16 @@
         color: #000;
         text-decoration: none;
     }
+
+
+    .blur {
+        filter: url(blur.svg#blur);
+        /* FireFox, Chrome, Opera */
+        filter: blur(3px);
+        /* Chrome, Opera */
+        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=false);
+        /* IE6~IE9 */
+    }
 </style>
 
 <body>
@@ -152,15 +183,21 @@
     <div class="left">
 
         <div class="left_top">
-
+            <!-- <div>
+                <span id="origin"></span><br>
+                <span id="author"></span><br>
+                <span id="content"></span><br>
+            </div> -->
             <div class="title">天·鸣</div>
 
-            <div class="subtitle">行亦禅，卧亦禅。语默动静体自然</div>
+            <div class="subtitle" id="content">
+                <!-- 行亦禅，卧亦禅。语默动静体自然 -->
+            </div>
 
         </div>
 
         <div class="left_center">
-            <div class="img"></div>
+            <div class="img blur"></div>
         </div>
 
         <div class="left_bottom">
