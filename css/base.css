@@ -1,0 +1,123 @@
+/* 全局样式 */
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #E2E2E2;
+
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+
+}
+
+.blog{
+    background-color: #2e8b57;
+}
+
+.border {
+    /* padding: 0 10px 10px 10px; */
+    background-color: #F5F5F5;
+}
+
+#nav {
+    transition: all 0.5s;
+}
+
+.shade {
+    box-shadow: 0 1px 10px 1px #505050;
+}
+
+.navBar {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: #F5F5F5;
+}
+
+.navParent {
+    position: absolute;
+    height: 30px;
+    /* width: calc(100% - 20px); */
+    background-color: #F5F5F5;
+    top: 10px;
+    left: 70px;
+}
+
+.navLogo {
+    cursor: pointer;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+
+    background: rgba(0, 0, 0, 0) url(../img/logoBig.png) no-repeat;
+    background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    -webkit-background-size: 50px 50px;
+    -o-background-size: 50px 50px;
+
+}
+
+.navItem {
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    line-height: 30px;
+    transition: all 0.1s;
+}
+
+.navItem {
+    color: #858585;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: inset 0 0 0.5px 0.5px #858585;
+}
+
+.navItem:hover {
+    transform: translateY(-1px);
+    height: 32px;
+    box-shadow: inset 0 0 0.5px 0.5px #858585, 1px 1px 5px 0.02px #505050;
+    /* line-height: 32px; */
+}
+
+.navItem:active {
+    box-shadow: inset 0 0 0.5px 0.5px #858585,
+        1px 1px 5px 0.02px #505050;
+    transform: translateY(0);
+    height: 30px;
+}
+
+.content {
+    height: 1500px;
+    background-color: #E2E2E2;
+
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: #E2E2E2;
+    color: #BABABA;
+    text-align: center;
+    font-size: 12px;
+}
+
+.state {
+    background-color: rgba(200, 200, 200, 0.1);
+    position: fixed;
+    line-height: 20px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
