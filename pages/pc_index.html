@@ -59,6 +59,7 @@
         width: 100%;
         font-size: 200%;
         text-align: center;
+        cursor: crosshair;
     }
 
     .left_top .subtitle {
@@ -67,6 +68,7 @@
         width: 100%;
         font-size: 120%;
         text-align: center;
+        cursor: text;
     }
 
     .left_center {
@@ -78,6 +80,8 @@
         top: 250px;
         background-color: #DDD;
         border-radius: 50%;
+        cursor: none;
+        transition: filter 0.5s;
     }
 
     .left_center .img {
@@ -104,6 +108,14 @@
     .left_bottom .link div {
         padding: 15px;
         border-bottom: 0.5px solid #CCC;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .left_bottom .link div:hover {
+        transform: translateY(-2px);
+        transform: translateX(2px);
+        background-color: rgba(0, 0, 0, 0.1);
     }
 
     .left_bottom .ico {
@@ -119,8 +131,8 @@
 
     .left_bottom .ico a {
         background-color: saddlebrown;
-        width: 64px;
-        height: 64px;
+        width: 32px;
+        height: 32px;
         float: left;
         margin: 20px;
     }
@@ -176,6 +188,15 @@
         filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=false);
         /* IE6~IE9 */
     }
+
+    .blur:hover {
+        filter: url(blur.svg#blur);
+        /* FireFox, Chrome, Opera */
+        filter: blur(0px);
+        /* Chrome, Opera */
+        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=0, MakeShadow=false);
+        /* IE6~IE9 */
+    }
 </style>
 
 <body>
@@ -190,14 +211,12 @@
             </div> -->
             <div class="title">天·鸣</div>
 
-            <div class="subtitle" id="content">
-                <!-- 行亦禅，卧亦禅。语默动静体自然 -->
-            </div>
+            <div class="subtitle" id="content"></div>
 
         </div>
 
         <div class="left_center">
-            <div class="img blur"></div>
+            <div class="img blur" title="行亦禅，卧亦禅&#10;语默动静体自然"></div>
         </div>
 
         <div class="left_bottom">
@@ -209,9 +228,9 @@
             </div>
 
             <div class="ico">
-                <a href="" style="background: url('../img/QQ.ico') no-repeat 0 0"></a>
-                <a href="" style="background: url('../img/Wechat.ico') no-repeat 0 0"></a>
-                <a href="" style="background: url('../img/Github.ico') no-repeat 0 0"></a>
+                <a href="" style="background: url('../img/QQ.ico') no-repeat 0 0;background-size: 100%;"></a>
+                <a href="" style="background: url('../img/Wechat.ico') no-repeat 0 0;background-size: 100%;"></a>
+                <a href="" style="background: url('../img/Github.ico') no-repeat 0 0;background-size: 100%;"></a>
             </div>
 
         </div>
